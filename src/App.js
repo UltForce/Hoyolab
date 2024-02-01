@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Header.js";
+import Aside from "./Aside.js";
+import Section from "./Section.js";
+import characterData from "./Section.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="__layout">
+      <main class="app-pc">
+        <main class="rpg-aggregate">
+          <div class="rpg-aggregate-body-bg pc"></div>
+          <Header />
+          <Aside />
+          <Section characterData={characterData} />;
+        </main>
+      </main>
     </div>
   );
 }
